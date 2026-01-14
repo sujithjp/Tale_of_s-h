@@ -1,0 +1,216 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #d6d2d2;
+    font-family: 'Dancing Script', cursive;
+    color: black;
+}
+
+/* ---------------- BACKGROUND ---------------- */
+.bg_heart {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+/* ---------------- LANDING ---------------- */
+
+#landing {
+    width: 100%;
+    height: 100vh;
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing-content {
+    text-align: center;
+    color: black;
+}
+
+/* Headings */
+.landing-content h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(2.5rem, 6vw, 4.8rem);
+    margin-bottom: 10px;
+    animation: glow 3s infinite;
+}
+
+.landing-content h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin-bottom: 40px;
+    animation: glow 3s infinite;
+}
+
+/* Button */
+#startBtn {
+    padding: 14px 30px;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(30deg, #ff0000e5, #f32d2de0, #e7e7e7);
+    color: white;
+    cursor: pointer;
+    transition: transform 0.4s;
+    width: 280px;
+    height: 70px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.6);
+}
+
+#startBtn:hover {
+    transform: scale(1.15);
+    background: linear-gradient(50deg, #e100ffd7, #f86386, #ffdde1);
+    color: black;
+}
+#startBtn1 {
+    position: relative;
+    top: 25px;
+    padding: 14px 30px;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(30deg, #ff0000e5, #f32d2de0, #e7e7e7);
+    color: white;
+    cursor: pointer;
+    transition: transform 0.4s;
+    width: 280px;
+    height: 70px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.6);
+}
+
+#startBtn1:hover {
+    transform: scale(1.15);
+    background: linear-gradient(50deg, #e100ffd7, #63b5f8, #ffdde1);
+    color: black;
+}
+/* Fade in */
+.fade-in {
+    opacity: 0;
+    animation: fadeInText 3s forwards;
+}
+
+@keyframes fadeInText {
+    to { opacity: 1; }
+}
+
+/* Glow */
+@keyframes glow {
+    0%, 100% { text-shadow: 0 0 5px #fff, 0 0 15px #ff6f91; }
+    50% { text-shadow: 0 0 15px #fff, 0 0 30px #ff1493; }
+}
+
+/* ---------------- GALLERY ---------------- */
+
+#gallery {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background-color: #ffe4e4;
+}
+
+.section-title {
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+}
+
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.memory-item {
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 15px;
+    background: linear-gradient(100deg,#ff9bd8,#ffe4e4,rgba(255,72,215,0.8));
+    box-shadow: 0 10px 30px rgba(0,0,0,.5);
+    transition: .4s;
+}
+
+.memory-item:hover {
+    transform: translateY(-10px) scale(1.03);
+}
+
+.memory-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.memory-item a {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* ---------------- STORY ---------------- */
+
+#story {
+    min-height: 100vh;
+    background-color: #ac9fbb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.back {
+    align-self: flex-start;
+    margin-bottom: 30px;
+}
+
+#story-content {
+    max-width: 900px;
+    text-align: center;
+}
+
+#story-content img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    margin: 30px auto;
+    border: 20px solid #ddbdd5;
+}
+
+#story-content h2 {
+    font-family: Arial;
+    font-size: 3rem;
+    color: #fc406c;
+}
+
+#story-content p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+/* ---------------- HEART ---------------- */
+
+.heart {
+    position: fixed;
+    font-size: 24px;
+    animation: float 1s linear;
+}
+
+@keyframes float {
+    from {opacity:1; transform: translateY(0);}
+    to {opacity:0; transform: translateY(-60px);}
+}

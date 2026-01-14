@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Story</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section id="story">
+    <button onclick="goBack()" class="back">← Back to Memories</button>
+
+    <div id="story-content" class="fade-in"></div>
+</section>
+
+<script>
+const stories = {
+    1: {
+        title: "First Meeting",
+        image: "images/1 (1).jpg",
+        text: "The first time I saw her was at the engagement ceremony. I looked at her, but back then, there were no feelings of love in my heart. Love stories felt far away from me, like something meant for others, not for me. I wasn’t searching for that kind of connection, and I believed I was perfectly fine without it.But time has a quiet way of changing things.Little by little, she began to appear in my thoughts without warning. Simple moments, small memories, and unspoken feelings slowly found their place in my heart. I didn’t notice when it started, or how it grew, but one day I realized she mattered more than I ever expected.What once felt distant became deeply personal. The love I never looked for found me on its own. And without even realizing it, I came to love her more than anyone else, in a way that felt natural, honest, and true."
+    },
+    2: {
+        title: "Where It All Started",
+        image: "images/2.1.png",
+        text: "After the engagement, I had no thoughts of loving her. Then, on January 26, we attended a wedding—my brother and sister-in-law’s wedding. It was at that wedding reception that I first saw her. At that time, I didn’t really have any feelings; I just casually glanced at her. Later, during the photo shoot, we talked a bit, and it was nice, but I still didn’t have strong feelings. The next morning, at the wedding ceremony at the temple, when I saw her in a red saree, she looked absolutely stunning. No one else looked as beautiful, and in that moment, I felt something. That was when I first began to have feelings for her, and I wondered, “Could I love her?” It sparked something inside me, but I was cautious. I didn’t want to jump into love too quickly; I needed to get to know her better first. That’s when I started thinking about how to get her number. I even challenged my sister and others to help me get it, maybe by taking a photo or finding a way. Eventually, I got her number and sent her a photo, and that was the beginning of it all. So, I decided to wait for the right opportunity to talk and understand her better. Until then, I hadn’t made up my mind about anything. That’s basically what Chapter Two is all about."
+    },
+    3: {
+        title: "May Birthday Call",
+        image: "images/3.1.png",
+        text: "On her birthday in May, I kept thinking from morning till evening about how to wish her. I didn’t know what to say or how to start the conversation. I was nervous the whole day.Later that night, I was talking with my sister-in-law. She was at her birthday party. With a little courage, I asked her to give the phone to her. When we spoke, it felt nice and simple. During the call, I asked her to give me chocolates for her birthday. She laughed and asked, “Where is my chocolate?” I asked why, and she said my birthday was also in May, on May 24, so I should give her chocolate first, then she would give me.I agreed and told her that she would be coming to Anna and Anni’s house on June 1 to buy some things. I said we could exchange chocolates then. She asked me what chocolate I wanted. I said Dairy Milk. Then she smiled and said she wanted KitKat because it was her favourite.So, our next meeting was fixed for June 1, 2023, at Anna and Anni’s house. That small conversation stayed in my mind for a long time. That is what Chapter Three is all about."
+    },
+    4: {
+        title: "Falling in Love",
+        image: "images/4.2.jpg",
+        text: "After the birthday call and the small chocolate conversation, I started thinking about her more than before. It didn’t happen suddenly. It happened slowly, without me even noticing it at first.I began to observe her in small ways — the way she spoke, the way she smiled, and the way she reacted to simple things. She was calm, respectful, and genuine. There was a natural simplicity in her that made her stand out. She didn’t try to impress anyone, yet her behavior itself left a deep impression on me.What touched me the most was her character. The way she treated people, the respect she showed to elders, and the kindness in her words made me feel comfortable and peaceful. Being around her, even in thoughts, gave me a sense of calm I had never felt before.I still didn’t openly call it love, but deep inside, I knew something had changed. It was no longer just about seeing her or talking to her. I started to care about her as a person. Her presence began to matter to me in a quiet but powerful way.That was the moment I realized I had fallen in love with her — not just with her, but with her character.The chapters ahead will explain how that love grew stronger day by day, how the feeling deepened over time, and how I slowly began to share my feelings about her with my friends."
+    },
+    5: {
+        title: "My Friends & Her College Life",
+        image: "images/5.png",
+        text: "After the birthday call and our small chocolate conversation, I realized that my future was meant to be with her. I liked her so much that I couldn’t stop thinking about her. I started sharing everything about her with my school friends and college friends. Without her, my conversations with them wouldn’t have been the same. I would tell them how I first saw her, what we talked about, and how we spent time together at Saravana Stores and at Anna’s house.At first, they thought it was just a crush. They would say things like, “Suma is talking about that girl because she is a relative, a moorai ponnu.” But over time, I started talking about her every day — how I planned to care for her, my future dreams with her, and how much I loved her.Before seeing her, I used to study just enough to pass my semester exams. I didn’t care much about extra courses or placements. After seeing her, everything changed. I started taking extra courses, improving my knowledge in all areas, and working hard — all for her, and to build a future where I could be with her.When her college life began, she didn’t know much about the computer science field, so I helped her by sending YouTube channels to understand the basic concepts. After she joined college in September 2023, we started talking regularly through messages, because phones were allowed in college. Before that, at the NEET institute, phones weren’t allowed, so I couldn’t talk to her.That’s when my chatting journey with her truly began. Every message, every little conversation made me feel closer to her, and it slowly became one of the happiest parts of my life."
+    },
+    6: {
+        title: "Marina Beach Meeting",
+        image: "images/6.jpg",
+        text: "I would tell my friends a lot about her, and we’d chat whenever possible, even though she didn’t use her phone much. Still, talking to her always made me happy.When Marina Beach’s leave came up, we went there with my family and hers. Meeting her in person was wonderful — she looked like a college girl, and it was exciting to see her that way. I felt a mix of nervousness and happiness. Over the next few days, we kept talking, and I enjoyed that feeling of connecting with her.This is the one of the best memory of her that i will not forget in my life time"
+    },
+    7: {
+    title: "Pongal Meeting",
+    image: "images/7.jpeg",
+    text: "Chapter 7 is about the Pongal celebration trip we took with my sister-in-law and the elders. On the way, I discovered that my sister-in-law mentioned that she was planning to come as well, which made it even more exciting. It wasn’t something we had planned in advance, but that spontaneity added to the fun.We all had a great time together during those three days. I got to spend quality time with her and her family, and we had wonderful conversations. There were games, laughter, and lots of memorable moments. Overall, it was a joyful experience, and it brought us closer."
+},
+8: {
+    title: "May 18 – First Call",
+    image: "images/8.jpeg",
+    text: "In Chapter 8, I really wanted to talk to her over the phone, but it never seemed to happen. We mostly communicated through messages, and in person, she was often shy. But in May, I finally got the chance to have that phone call with her. We talked about our stories, and it was a joyful conversation that made us feel closer.This call was special, and it brought back memories of our birthdays. Just like we had planned before, we exchanged gifts and celebrated together. On May 26, we had the Valaikappu event, and that was another beautiful moment for us.Overall, it was a meaningful chapter where we grew closer and shared more about ourselves."
+},
+9: {
+    title: "Valaikappu Meeting",
+    image: "images/9.png",
+    text: "So, the plan was to give her a KitKat, and that was something I had been thinking about. When the Valaikappu event came, we went there, and it felt special for several reasons. Even though we had met before and spoken, this time was different because we had already talked on the phone. Having those phone conversations made the meeting even more meaningful.When I arrived at the event, I was excited and a bit nervous. I looked for her, and when I saw her, we exchanged greetings. I was a bit unsure about how to give her the KitKat, but I eventually managed to do it. It felt really nice to share that moment with her.Overall, the Valaikappu event turned out to be a memorable and special experience."
+},
+10: {
+    title: "The Happiest Month in My LIFE",
+    image: "images/10.jpeg",
+    text: "after the Valaikappu function, she went back to her college hostel, and at the same time, I was on leave from my internship. This gave us many chances to talk every day, and June became a very special month for me. We spoke daily on the phone and slowly got to know each other very well. We shared our stories, thoughts, and feelings openly.She told me about her school friends and her sweet memories from those days, which I still remember clearly. Our conversations were never short. Even our minimum talk was one hour, and sometimes it went up to two and a half hours. Those long calls were very precious to me, and they brought us closer in a beautiful and unforgettable way."
+},
+11: {
+    title: "Group Memories",
+    image: "images/11.jpg",
+    text: "Photos, fun, and moments frozen in time with friends..."
+},
+12: {
+    title: "Blocked (July–Sept)",
+    image: "images/12.jpg",
+    text: "June was such a joyful and memorable time, and I never imagined that things would change so quickly. By the end of July, I was suddenly blocked, and I couldn’t understand why. The happy conversations of June slowly turned into silence from the end of July till September. I was confused and hurt, trying to make sense of what had happened.During those months, I kept wondering where things went wrong. I spoke to my friends, shared my worries, and searched for answers, but no one had any clarity. That period left me feeling lost and uncertain, constantly questioning and hoping for an explanation that never came."
+},
+13: {
+    title: "Restart Again (Unblock)",
+    image: "images/13.png",
+    text: "After that, in September, she suddenly messaged me, and at first, I was surprised and confused by her unexpected return. Slowly, we started talking again, and things seemed to get better. Still, there were times when the conversations faded, and the question kept coming back to my mind—why had she blocked me for those months?One day, I finally asked her directly during a phone call. She told me it happened because of misunderstandings and because some people had influenced her thoughts, which led her to block me. When I shared this with my friends, they were also confused and a little frustrated. That phase was filled with mixed emotions, uncertainty, and many unanswered feelings."
+},
+14: {
+    title: "January 2025 to June",
+    image: "images/janjune.png",
+    text: "This is the moment when I began to wonder if I should express my feelings and possibly propose to her. After nearly a year of talking, I hoped for a certain outcome, but I also felt nervous and unsure. I wanted to achieve certain things in my life first before taking that step. There was also a part of me that wondered if our bond was just friendship, and I didn’t want to risk that. It was a time of deep emotions and uncertainty, and it was quite an intense and emotional experience for me."
+},
+15: {
+    title: "Reshva’s Birthday Diaries",
+    image: "images/14.1.jpeg",
+    text: "Then, for Reshva’s birthday, we went to celebrate. I had visited before as well, and I intended to record moments, but I didn’t want to disturb her or make her feel uncomfortable, so I decided not to do that. We still got many special moments, and although I was a bit unsure, I focused on enjoying the time with her. By the time I went home, it was late, and I had to leave. The next day, we played, chatted, and enjoyed each other’s company. There were moments of taking selfies and celebrating her achievements, and it was truly a wonderful experience."
+},
+16: {
+    title: "Future With you",
+    image: "images/16.jpeg",
+    text: "<ul ><li>I dream of a future where we live together, sharing a simple and peaceful life.</li><li>I imagine waking up every day knowing you are beside me, feeling safe and loved.</li><li>I want to care for you in every way—listening to you, supporting you, and standing by you.</li><li>In your happy moments, I want to celebrate with you, and in your hard times, be your strength.</li><li>I promise to respect your feelings, understand your silence, and value your words.</li><li>I see myself protecting your peace and encouraging your dreams.</li><li>My future with you is about growing together with love, trust, and care.</li></ul>"
+
+
+}
+};
+
+const params = new URLSearchParams(window.location.search);
+const memoryId = params.get('memory');
+
+if (memoryId && stories[memoryId]) {
+    const story = stories[memoryId];
+    document.getElementById('story-content').innerHTML = `
+        <img src="${story.image}" alt="${story.title}">
+        <h2>${story.title}</h2>
+        <p>${story.text}</p>
+    `;
+}
+
+function goBack() {
+    window.location.href = "memories.html";
+}
+</script>
+
+</body>
+</html>
